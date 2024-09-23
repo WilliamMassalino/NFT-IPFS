@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && open -a 'Google Chrome' --args --incognito http://localhost:3000\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.1.6",
+    "@tanstack/react-query": "^5.56.2",
+    "next": "^14.2.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.5",
+    "viem": "^2.21.8",
+    "wagmi": "^2.12.12"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "open-cli": "^8.0.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "wait-on": "^8.0.1"
+  },
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    }
+  }
+}
